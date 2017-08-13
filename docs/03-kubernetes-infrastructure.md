@@ -29,6 +29,10 @@ nomad  us-central1-f  1.7.3           XX.XXX.XXX.XX  n1-standard-8  1.7.3       
 
 > Estimated time to completion: 5 minutes.
 
+gcloud container clusters list
+NAME   ZONE           MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
+nomad  us-central1-f  1.7.3           XX.XXX.XXX.XX  n1-standard-8  1.7.3         5          RUNNING
+
 ### Provision a Vault Node Pool
 
 Add an additional node pool to support running Vault on a dedicated set of machines. Running Vault under single tenancy is [recommended for production](https://www.vaultproject.io/guides/production.html).
