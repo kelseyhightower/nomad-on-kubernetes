@@ -98,7 +98,7 @@ kubectl taint nodes \
 
 Access to all components will be secured using TLS mutual authentication but caution should be taken to limit remote access to a limited set of IP address ranges. This tutorial permits access from anywhere to make things easier to follow.
 
-Enable access to the Consul cluster from anywhere.
+Enable access to the Consul cluster from anywhere:
 
 ```
 gcloud compute firewall-rules create default-allow-consul \
@@ -106,7 +106,7 @@ gcloud compute firewall-rules create default-allow-consul \
   --description "Allow consul from anywhere"
 ```
 
-Enable access to the Nomad server from anywhere.
+Enable access to the Nomad server from anywhere:
 
 ```
 gcloud compute firewall-rules create default-allow-nomad \
@@ -114,7 +114,7 @@ gcloud compute firewall-rules create default-allow-nomad \
   --description "Allow consul from anywhere"
 ```
 
-Enable access to the Vault server from anywhere.
+Enable access to the Vault server from anywhere:
 
 ```
 gcloud compute firewall-rules create default-allow-vault \
