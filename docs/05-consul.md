@@ -6,7 +6,7 @@ Consul is a distributed key/value store that provides service discovery and heal
 
 Consul will be configured to store cluster state on network attached volumes. The network attached volumes will be dynamically provisioned and managed by Kubernetes.
 
-Create the `consul` ConfigMap witch holds the Consul server and client configuration:
+Create the `consul` ConfigMap which holds the Consul server and client configuration:
 
 ```
 kubectl apply -f configmaps/consul.yaml
