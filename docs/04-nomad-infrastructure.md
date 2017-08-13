@@ -58,7 +58,7 @@ nomad                           XX.XX.XXX.XXX   XX.XXX.XXX.X   4646:32740/TCP,46
 vault                           XX.XX.XXX.XXX   XX.XXX.XX.XXX  8200:31968/TCP,8201:31817/TCP
 ```
 
-Do not continue to the next section until the above Nomad services have obtained an external IP address.
+Do not continue until the above Nomad services have obtained an external IP address.
 
 ## Create the Kubernetes Secrets
 
