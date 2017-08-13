@@ -18,7 +18,7 @@ Create the `nomad` StatefulSet which will manage Nomad servers and ensure they h
 kubectl apply -f statefulsets/nomad.yaml
 ```
 
-It can take a few minutes before the Nomad cluster is ready. Use `kubectl` to monitor progress:
+It can take a few minutes before the Nomad cluster is ready. Use the `kubectl` command to monitor progress:
 
 ```
 kubectl get pods -l app=nomad
