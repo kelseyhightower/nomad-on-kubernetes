@@ -6,7 +6,7 @@ Kubernetes will be used to host the Nomad control plane including the following 
 * [Vault](https://www.vaultproject.io/) 0.8.0
 * [Nomad](https://www.nomadproject.io/) 0.6.0
 
-## Create a Kubernetes Cluster
+## Provision a Kubernetes Cluster
 
 A Kubernetes 1.7.x cluster is required to host the Nomad control plane components. Use the `gcloud` command to provision a five node Kubernetes cluster:
 
@@ -17,7 +17,15 @@ gcloud container clusters create nomad \
   --num-nodes 5
 ```
 
-It can take several minutes to provision the Kubernetes cluster.
+It can take several minutes to provision the Kubernetes cluster. Either wait for the above command to return or use the `gcloud` command to monitor progress in a separate terminal:
+
+```
+gcloud container clusters list
+```
+```
+NAME   ZONE           MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
+nomad  us-central1-f  1.7.3           XX.XXX.XXX.XX  n1-standard-8  1.7.3         5          PROVISIONING
+```
 
 > Estimated time to completion: 5 minutes.
 
