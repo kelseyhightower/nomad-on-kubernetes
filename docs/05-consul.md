@@ -57,3 +57,5 @@ data:
     {"consul": ["$(kubectl get svc consul-dns -o jsonpath='{.spec.clusterIP}')"]}
 EOF
 ```
+
+Next: [Provision The Vault Service](06-vault.md)

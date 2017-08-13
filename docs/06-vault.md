@@ -229,3 +229,5 @@ vault-token:    36 bytes
 The Vault cluster is now ready for use by the Nomad control plane.
 
 > Note: If the Vault server is ever restarted it must be [unsealed](#unseal-the-remote-vault-instance).
+
+Next: [Provision The Nomad Servers](07-nomad.md)

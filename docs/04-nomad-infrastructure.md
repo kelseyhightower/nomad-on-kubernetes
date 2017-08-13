@@ -188,3 +188,5 @@ kubectl create secret generic nomad \
   --from-file=nomad.pem \
   --from-file=nomad-key.pem
 ```
+
+Next: [Provision The Consul Cluster](05-consul.md)

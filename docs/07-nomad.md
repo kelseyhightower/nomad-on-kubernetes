@@ -71,3 +71,5 @@ nomad-2.global  XX.X.X.X  4648  alive   false   2         0.6.0  dc1         glo
 ```
 
 The Nomad cluster has been fully bootstrapped and is now ready for use.
+
+Next: [Provision the Nomad Worker Nodes](08-nomad-worker-nodes.md)

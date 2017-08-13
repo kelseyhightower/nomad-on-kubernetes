@@ -108,3 +108,5 @@ XXXXXXXX  dc1  nomad-XXXX  <none>  false  ready
 ```
 
 At this point the Nomad cluster is ready to accept and run Nomad Jobs.
+
+Next: [Running Nomad Jobs](09-nomad-jobs.md)
