@@ -102,10 +102,10 @@ nomad logs -job ping
 ```
 
 ```
-PING google.com (74.125.70.100) 56(84) bytes of data.
-64 bytes from il-in-f100.1e100.net (74.125.70.100): icmp_seq=1 ttl=53 time=1.01 ms
-64 bytes from il-in-f100.1e100.net (74.125.70.100): icmp_seq=2 ttl=53 time=0.675 ms
-64 bytes from il-in-f100.1e100.net (74.125.70.100): icmp_seq=3 ttl=53 time=0.621 ms
+PING google.com (XX.XXX.XX.XXX) 56(84) bytes of data.
+64 bytes from XX-XX-XXXX.XXXXX.net (XX.XXX.XX.XXX): icmp_seq=1 ttl=53 time=1.01 ms
+64 bytes from XX-XX-XXXX.XXXXX.net (XX.XXX.XX.XXX): icmp_seq=2 ttl=53 time=0.675 ms
+64 bytes from XX-XX-XXXX.XXXXX.net (XX.XXX.XX.XXX): icmp_seq=3 ttl=53 time=0.621 ms
 ```
 
 The `ping` Job is set to run continuously. After every successful run Nomad will automatically restart the Job.
@@ -143,6 +143,13 @@ Retrieve and view the logs for the `token-printer` Job:
 
 ```
 nomad logs -f -stderr -job token-printer
+```
+
+```
+XXXX/XX/XX XX:XX:XX starting token-printer service...
+XXXX/XX/XX XX:XX:XX current token value: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+XXXX/XX/XX XX:XX:XX current token value: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+XXXX/XX/XX XX:XX:XX current token value: XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 ```
 
 The `token-printer` Job is set to run continuously and will automatically reload the Vault token from disk after receiving a `NOHUP` single from the local Nomad agent.
