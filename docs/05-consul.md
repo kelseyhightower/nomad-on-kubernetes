@@ -21,7 +21,7 @@ kubectl apply -f statefulsets/consul.yaml
 It will take a few minutes to provision the Consul cluster. Use the `kubectl` command to monitor progress:
 
 ```
-kubectl get pods
+kubectl get pods -l app=consul
 ```
 ```
 NAME       READY     STATUS    RESTARTS   AGE
