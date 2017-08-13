@@ -86,7 +86,7 @@ nomad  us-central1-f  1.7.3           XXX.XXX.XX.XX  n1-standard-8  1.7.3       
 
 ### Taint the Vault Node Pool
 
-Ensure the nodes in the `vault-pool` node pool only accept the Vault workload by [tainting](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#taints-and-tolerations-beta-feature) them.
+Ensure the nodes in the `vault-pool` node pool only accept Vault workloads by [tainting](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/#taints-and-tolerations-beta-feature) them.
 
 ```
 kubectl taint nodes \
