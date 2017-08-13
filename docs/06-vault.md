@@ -6,7 +6,7 @@ Vault provides secrets management in a Nomad cluster and will be deployed as par
 
 Vault will be configured to store its state in the Consul cluster setup in the previous section. A StatefulSet is being used to ensure each Vault instance receives a stable DNS name and to provide stable storage for the local consul instance running as a side-car.
 
-Create the Vault ConfigMap and store the Vault configuration file:
+Create the Vault ConfigMap which holds the Vault server configuration:
 
 ```
 kubectl apply -f configmaps/vault.yaml
