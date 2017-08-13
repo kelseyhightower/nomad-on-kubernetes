@@ -1,10 +1,12 @@
 # Prerequisites
 
-### Kubernetes
+### Google Cloud Platform
 
-* [Kubernetes](https://kubernetes.io/) 1.7.3+
+This tutorial leverages the [Google Cloud Platform](https://cloud.google.com/) to streamline the provisioning of a Kubernetes cluster and the necessary compute infrastructure required to run a Nomad cluster. [Sing up](https://cloud.google.com/free/) for $300 in free credits.
 
-This tutorial leverages the [Google Container Engine](https://cloud.google.com/container-engine/) to streamline the provisioning of a Kubernetes cluster.
+The cost to run this tutorial: $2.25 per hour.
+
+> The compute resources required for this tutorial exceed the Google Cloud Platform free tier.
 
 ### Source
 
