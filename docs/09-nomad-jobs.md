@@ -116,6 +116,13 @@ Stop and purge the `ping` Job:
 nomad stop -purge ping
 ```
 
+```
+==> Monitoring evaluation "XXXXXXXX"
+    Evaluation triggered by job "ping"
+    Evaluation status changed: "pending" -> "complete"
+==> Evaluation "XXXXXXXX" finished with status "complete"
+```
+
 ### Run the token printer Job
 
 The `token-printer` Job demonstrates Nomad's native Vault integration. The `token-printer` Job specification requests a Vault token attached to the default Vault profile. The Nomad agent that accepts and runs the `token-printer` Job will populate a token in a file named `vault_token` under the running Job's secret directory. The `token-printer` job will continuously monitor the token file for changes while printing the current value to stderr.
