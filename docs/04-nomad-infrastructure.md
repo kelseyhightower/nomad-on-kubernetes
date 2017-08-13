@@ -26,7 +26,7 @@ service "nomad" created
 service "vault" created
 ```
 
-It can take several minutes for the internal and external load balancers to provision. Use `kubectl` to monitor progress:
+It can take several minutes for the internal and external load balancers to provision. Use the `kubectl` command to monitor progress:
 
 ```
 kubectl get services
