@@ -51,7 +51,7 @@ gcloud container node-pools create vault-pool \
 
 > Estimated time to completion: 2 minutes.
 
-List the node pools for the nomad cluster:
+List the node pools for the `nomad` Kubernetes cluster:
 
 ```
 gcloud container node-pools list --cluster nomad
