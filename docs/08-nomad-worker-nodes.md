@@ -67,15 +67,7 @@ nomad-XXXX  us-central1-f  RUNNING
 
 > Estimated time to completion: 2 minutes.
 
-```
-gcloud compute instance-groups list-instances nomad
-```
-```
-NAME        ZONE           STATUS
-nomad-XXXX  us-central1-f  RUNNING
-nomad-XXXX  us-central1-f  RUNNING
-nomad-XXXX  us-central1-f  RUNNING
-```
+> While the VMs will start running in as little as 30 seconds it will take up to 2 minutes before the nomad and consul services are configured and running.
 
 ## Check the Nomad Node Status
 
