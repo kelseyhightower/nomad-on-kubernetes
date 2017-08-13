@@ -1,8 +1,6 @@
 #!/bin/bash
 
 ## Remove Kubernetes Resources
-kubectl delete poddisruptionbudgets consul nomad
-
 kubectl delete statefulset consul nomad vault
 
 kubectl delete persistentvolumeclaims \
