@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: consul
+data:
+  agent.json: |
+    {
+      "ca_file": "/etc/consul/tls/ca.pem",
+      "cert_file": "/etc/consul/tls/consul.pem",
+      "key_file": "/etc/consul/tls/consul-key.pem",
+      "verify_outgoing": true,
+      "verify_server_hostname": true
+    }
+  server.json: |
+    {
+      "autopilot": {
+        "cleanup_dead_servers": true,
+        "last_contact_threshold": "300ms",
+        "max_trailing_logs": 250,
+        "server_stabilization_time": "10s"
+      },
+      "ca_file": "/etc/consul/tls/ca.pem",
+      "cert_file": "/etc/consul/tls/consul.pem",
+      "key_file": "/etc/consul/tls/consul-key.pem",
+      "ports": { 
+        "https": 8443
+      },
+      "verify_incoming": true,
+      "verify_outgoing": true,
+      "verify_server_hostname": true
+    }

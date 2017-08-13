@@ -1,0 +1,114 @@
+apiVersion: apps/v1beta1
+kind: StatefulSet
+metadata:
+  name: vault
+spec:
+  serviceName: vault
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: vault
+    spec:
+      affinity:
+        podAntiAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+            - labelSelector:
+                matchExpressions:
+                  - key: app
+                    operator: In
+                    values:
+                      - vault
+              topologyKey: kubernetes.io/hostname
+      nodeSelector:
+        dedicated: vault
+      tolerations:
+        - key: dedicated
+          operator: "Equal"
+          value: vault
+          effect: "NoSchedule"
+      containers:
+        - name: vault
+          image: "vault:0.8.0"
+          args:
+            - "server"
+            - "-config=/etc/vault/config/vault.hcl"
+          ports:
+            - name: http
+              containerPort: 8200
+              protocol: "TCP"
+            - name: server
+              containerPort: 8201
+              protocol: "TCP"
+          resources:
+            requests:
+              cpu: 1
+              memory: "1024Mi"
+          securityContext:
+            capabilities:
+              add:
+                - IPC_LOCK
+          volumeMounts:
+            - name: vault-config
+              mountPath: /etc/vault/config
+            - name: vault-tls
+              mountPath: /etc/vault/tls
+        - name: consul
+          image: "consul:0.9.1"
+          env:
+            - name: GOSSIP_ENCRYPTION_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: consul
+                  key: gossip-encryption-key
+            - name: NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+          args:
+            - "agent"
+            - "-config-file=/etc/consul/config/agent.json"
+            - "-datacenter=dc1"
+            - "-data-dir=/var/lib/consul"
+            - "-disable-host-node-id"
+            - "-domain=consul."
+            - "-encrypt=$(GOSSIP_ENCRYPTION_KEY)"
+            - "-retry-join=consul-0.consul.$(NAMESPACE).svc.cluster.local"
+            - "-retry-join=consul-1.consul.$(NAMESPACE).svc.cluster.local"
+            - "-retry-join=consul-2.consul.$(NAMESPACE).svc.cluster.local"
+          resources:
+            requests:
+              cpu: "500m"
+              memory: "512Mi"
+          volumeMounts:
+            - name: consul-config
+              mountPath: /etc/consul/config
+            - name: consul-data
+              mountPath: /var/lib/consul
+            - name: consul-tls
+              mountPath: /etc/consul/tls
+      securityContext:
+        fsGroup: 1000
+      terminationGracePeriodSeconds: 10
+      volumes:
+        - name: consul-config
+          configMap:
+            name: consul
+        - name: consul-tls
+          secret:
+            secretName: consul
+        - name: vault-config
+          configMap:
+            name: vault
+        - name: vault-tls
+          secret:
+            secretName: vault
+  volumeClaimTemplates:
+    - metadata:
+        name: consul-data
+      spec:
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 100Gi

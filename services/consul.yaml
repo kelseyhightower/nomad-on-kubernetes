@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: consul
+  labels:
+    name: consul
+spec:
+  clusterIP: None
+  ports:
+    - name: dns-tcp
+      port: 8600
+      protocol: "TCP"
+    - name: dns-udp
+      port: 8600
+      protocol: "UDP" 
+    - name: http
+      port: 8500
+      protocol: "TCP"
+    - name: https
+      port: 8443
+      protocol: "TCP"
+    - name: serf-lan-tcp
+      port: 8301
+      protocol: "TCP"
+    - name: serf-lan-udp
+      port: 8301
+      protocol: "UDP"
+    - name: serf-wan-tcp
+      port: 8302
+      protocol: "TCP"
+    - name: serf-wan-udp
+      port: 8302
+      protocol: "UDP"
+    - name: server-rpc
+      port: 8300
+      protocol: "TCP"
+  selector:
+    app: consul

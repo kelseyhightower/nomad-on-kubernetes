@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: nomad
+data:
+  server.hcl: |
+    bind_addr = "0.0.0.0"
+    data_dir = "/var/lib/nomad"
+    
+    server {
+      enabled = true
+      bootstrap_expect = 3
+    }
+
+    tls {
+      ca_file = "/etc/nomad/tls/ca.pem"
+      cert_file = "/etc/nomad/tls/nomad.pem"
+      http = true
+      key_file = "/etc/nomad/tls/nomad-key.pem"
+      rpc = true
+      verify_https_client = true
+    }
+
+    vault {
+      address = "https://vault.service.consul:8200"
+      ca_file = "/etc/vault/tls/ca.pem"
+      cert_file = "/etc/vault/tls/vault.pem"
+      create_from_role = "nomad-cluster"
+      enabled = true
+      key_file = "/etc/vault/tls/vault-key.pem"
+    }

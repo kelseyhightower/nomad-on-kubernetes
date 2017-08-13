@@ -1,0 +1,16 @@
+{
+  "CN": "global.nomad",
+  "key": {
+    "algo": "rsa",
+    "size": 2048
+  },
+  "names": [
+    {
+      "C": "US",
+      "L": "Portland",
+      "O": "Kubernetes",
+      "OU": "Nomad",
+      "ST": "Oregon"
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "CN": "server.dc1.consul",
+  "key": {
+    "algo": "rsa",
+    "size": 2048
+  },
+  "names": [
+    {
+      "C": "US",
+      "L": "Portland",
+      "O": "Kubernetes",
+      "OU": "Consul",
+      "ST": "Oregon"
+    }
+  ]
+}
