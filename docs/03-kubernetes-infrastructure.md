@@ -62,7 +62,7 @@ default-pool  n1-standard-8  100           1.7.3
 vault-pool    n1-standard-4  100           1.7.3
 ```
 
-It can take a few minutes before the `nomad` Kubernetes cluster is ready for use.
+It can take a few minutes before the `nomad` Kubernetes cluster is ready. Use the `gcloud` command to monitor progress:
 
 ```
 gcloud container clusters list
