@@ -21,3 +21,5 @@ Move into the `nomad-on-kubernetes` directory:
 ```
 cd nomad-on-kubernetes
 ```
+
+Next: [Install Client Tools](02-client-tools.md)
