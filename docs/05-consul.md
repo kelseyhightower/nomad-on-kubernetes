@@ -31,7 +31,7 @@ consul-0   0/1       Pending   0          5s
 > Estimated time to completion: 2 minutes.
 
 ```
-kubectl get pods
+kubectl get pods -l app=consul
 ```
 
 ```
