@@ -101,6 +101,13 @@ Retrieve and view the logs for the `ping` Job:
 nomad logs -job ping
 ```
 
+```
+PING google.com (74.125.70.100) 56(84) bytes of data.
+64 bytes from il-in-f100.1e100.net (74.125.70.100): icmp_seq=1 ttl=53 time=1.01 ms
+64 bytes from il-in-f100.1e100.net (74.125.70.100): icmp_seq=2 ttl=53 time=0.675 ms
+64 bytes from il-in-f100.1e100.net (74.125.70.100): icmp_seq=3 ttl=53 time=0.621 ms
+```
+
 The `ping` Job is set to run continuously. After every successful run Nomad will automatically restart the Job.
 
 Stop and purge the `ping` Job:
