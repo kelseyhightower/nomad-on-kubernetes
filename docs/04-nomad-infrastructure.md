@@ -101,6 +101,8 @@ Generate the CA certificate:
 cfssl gencert -initca ca/ca-csr.json | cfssljson -bare ca
 ```
 
+With the Certificate Authority in place we are now ready to generate TLS certificates for Consul, Vault, and Nomad. 
+
 Generate the Consul TLS certificate and private key:
 
 ```
