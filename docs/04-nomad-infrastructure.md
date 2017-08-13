@@ -101,7 +101,7 @@ Generate the CA certificate:
 cfssl gencert -initca ca/ca-csr.json | cfssljson -bare ca
 ```
 
-With the Certificate Authority in place we are now ready to generate TLS certificates for Consul, Vault, and Nomad. 
+With the Certificate Authority in place we are now ready to generate TLS certificates for Consul, Vault, and Nomad.
 
 Generate the Consul TLS certificate and private key:
 
@@ -153,7 +153,7 @@ Use the `consul` command to generate a gossip encryption key:
 GOSSIP_ENCRYPTION_KEY=$(consul keygen)
 ```
 
-Save the gossip encryption key to a file to later use:
+Save the gossip encryption key to a file for later use:
 
 ```
 echo $GOSSIP_ENCRYPTION_KEY > ~/.gossip_encryption_key
