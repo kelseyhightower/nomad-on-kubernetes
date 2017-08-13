@@ -1,6 +1,6 @@
 # Nomad on Kubernetes
 
-The Nomad on Kubernetes tutorial guides you through deploying [Nomad](https://www.nomadproject.io/) on [Kubernetes](https://kubernetes.io/) with a configuration suitable for production usage.
+The Nomad on Kubernetes tutorial documents how to deploy [Nomad](https://www.nomadproject.io/) on [Kubernetes](https://kubernetes.io/) with a configuration suitable for production usage.
 
 ![Nomad on Kubernetes](images/nomad-on-kubernetes.png)
 
@@ -29,6 +29,8 @@ Using Kubernetes to deploy and manage Nomad presents an opportunity for learning
 
 ### Clean up
 
+Run the `clean-up` bash script to remove all the compute resources created by this tutorial.
+
 ```
-bash clean-up.sh
+bash clean-up
 ```
