@@ -12,7 +12,6 @@ Using Kubernetes to deploy and manage Nomad presents an opportunity for learning
 
 * [Advanced Scheduling: Affinity and Anti-affinity](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/)
 * [Dynamic Storage Provisioning](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#dynamic)
-* [Pod Disruption Budgets](https://kubernetes.io/docs/concepts/workloads/pods/disruptions/)
 * [Support for Stateful Applications](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
 
 ## Tutorial
