@@ -61,6 +61,14 @@ Submit and run the `ping` Job:
 nomad run jobs/ping.nomad
 ```
 
+```
+==> Monitoring evaluation "XXXXXXXX"
+    Evaluation triggered by job "ping"
+    Allocation "XXXXXXXX" created: node "XXXXXXXX", group "example"
+    Evaluation status changed: "pending" -> "complete"
+==> Evaluation "XXXXXXXX" finished with status "complete"
+```
+
 Check the status of the `ping` Job:
 
 ```
