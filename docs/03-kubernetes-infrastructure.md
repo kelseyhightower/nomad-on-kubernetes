@@ -29,6 +29,8 @@ nomad  us-central1-f  1.7.3           XX.XXX.XXX.XX  n1-standard-8  1.7.3       
 
 > Estimated time to completion: 5 minutes.
 
+### Provision the Vault Node Pool
+
 Add an additional node pool to support running Vault on a dedicated set of machines. Running Vault under single tenancy is [recommended for production](https://www.vaultproject.io/guides/production.html).
 
 ```
