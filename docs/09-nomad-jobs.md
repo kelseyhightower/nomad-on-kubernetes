@@ -75,6 +75,26 @@ Check the status of the `ping` Job:
 nomad status ping
 ```
 
+```
+ID            = ping
+Name          = ping
+Submit Date   = XX/XX/XX XX:XX:XX PDT
+Type          = service
+Priority      = 50
+Datacenters   = dc1
+Status        = running
+Periodic      = false
+Parameterized = false
+
+Summary
+Task Group  Queued  Starting  Running  Failed  Complete  Lost
+example     0       0         1        0       0         0
+
+Allocations
+ID        Node ID   Task Group  Version  Desired  Status   Created At
+XXXXXXXX  XXXXXXXX  example     0        run      running  XX/XX/XX XX:XX:XX PDT
+```
+
 Retrieve and view the logs for the `ping` Job:
 
 ```
