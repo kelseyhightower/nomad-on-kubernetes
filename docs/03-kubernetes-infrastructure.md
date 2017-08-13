@@ -121,3 +121,5 @@ gcloud compute firewall-rules create default-allow-vault \
   --allow tcp:8200-8201 \
   --description "Allow vault from anywhere"
 ```
+
+Next: [Provision The Nomad Infrastructure](04-nomad-infrastructure.md)
