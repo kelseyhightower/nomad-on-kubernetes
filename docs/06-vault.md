@@ -20,7 +20,7 @@ kubectl apply -f statefulsets/vault.yaml
 
 > Only a single instance of Vault is being provisioned because Kubernetes will handle our HA requirements. If the Vault instances goes down it will be restarted. If the node hosting Vault goes down Kubernetes will reschedule Vault on another node in the node pool dedicated to Vault.
 
-It can take almost a minute before the `vault` cluster is ready. Use `kubectl` to monitor progress:
+It can take almost a minute before the `vault` cluster is ready. Use the `kubectl` command to monitor progress:
 
 ```
 kubectl get pods -l app=vault
