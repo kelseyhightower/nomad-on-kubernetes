@@ -26,6 +26,7 @@ Using Kubernetes to deploy and manage Nomad presents an opportunity for learning
 * [Provision The Nomad Servers](docs/07-nomad.md)
 * [Provision the Nomad Worker Nodes](docs/08-nomad-worker-nodes.md)
 * [Running Nomad Jobs](docs/09-nomad-jobs.md)
+* [The Consul UI](docs/10-consul-ui.md)
 
 ### Clean up
 
