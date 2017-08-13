@@ -17,7 +17,7 @@ gcloud container clusters create nomad \
   --num-nodes 5
 ```
 
-It can take several minutes to provision the Kubernetes cluster. Either wait for the above complete to return or use the `gcloud` command to monitor progress in a separate terminal:
+It can take several minutes to provision the Kubernetes cluster. Either wait for the above command to complete or use the `gcloud` command to monitor progress in a separate terminal:
 
 ```
 gcloud container clusters list
