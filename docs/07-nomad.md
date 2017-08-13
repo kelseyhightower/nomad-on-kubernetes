@@ -4,7 +4,7 @@ Nomad schedules applications and services in a similar fashion to Kubernetes but
 
 ## Provision the Nomad Servers
 
-Nomad will be configured to store the Nomad cluster state on a network attached volume. The network attached volume will be dynamically provisioned and managed by Kubernetes. Nomad will be configured to use Consul for service discovery and Vault for secrets management. The Nomad servers will also have access to Kubernetes secrets and services to help streamline bootstrapping and ongoing management of the Nomad servers.
+Nomad will be configured to store the Nomad cluster state on network attached volumes. The network attached volumes will be dynamically provisioned and managed by Kubernetes. Nomad will be configured to use Consul for service discovery and Vault for secrets management. The Nomad servers will also have access to Kubernetes secrets and services to help streamline bootstrapping and ongoing management of the Nomad servers.
 
 Create the `nomad` ConfigMap which holds the Nomad server configuration:
 
