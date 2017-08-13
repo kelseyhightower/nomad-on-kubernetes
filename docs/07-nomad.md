@@ -28,7 +28,7 @@ NAME      READY     STATUS              RESTARTS   AGE
 nomad-0   0/2       ContainerCreating   0          8s
 ```
 
-> Estimated time to completion: 2 minutes.
+> Estimated time to completion: 2 minutes. While the VMs will start running in as little as 30 seconds it will take up to 2 minutes before the nomad and consul services are configured and running.
 
 ```
 kubectl get pods -l app=nomad
