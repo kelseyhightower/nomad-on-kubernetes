@@ -42,8 +42,8 @@ spec:
               protocol: "TCP"
           resources:
             requests:
-              cpu: 1
-              memory: "1024Mi"
+              cpu: 500m
+              memory: "512Mi"
           securityContext:
             capabilities:
               add:
@@ -78,8 +78,8 @@ spec:
             - "-retry-join=consul-2.consul.$(NAMESPACE).svc.cluster.local"
           resources:
             requests:
-              cpu: "500m"
-              memory: "512Mi"
+              cpu: "250m"
+              memory: "128Mi"
           volumeMounts:
             - name: consul-config
               mountPath: /etc/consul/config

@@ -13,7 +13,7 @@ A Kubernetes 1.7.x cluster is required to host the Nomad control plane component
 ```
 gcloud container clusters create nomad \
   --cluster-version 1.7.3 \
-  --machine-type n1-standard-8 \
+  --machine-type n1-standard-4 \
   --num-nodes 5
 ```
 
@@ -44,7 +44,7 @@ Add an additional node pool to support running Vault on a dedicated set of machi
 ```
 gcloud container node-pools create vault-pool \
   --cluster nomad \
-  --machine-type n1-standard-4 \
+  --machine-type n1-standard-2 \
   --num-nodes 2 \
   --node-labels dedicated=vault
 ```
@@ -58,8 +58,8 @@ gcloud container node-pools list --cluster nomad
 ```
 ```
 NAME          MACHINE_TYPE   DISK_SIZE_GB  NODE_VERSION
-default-pool  n1-standard-8  100           1.7.3
-vault-pool    n1-standard-4  100           1.7.3
+default-pool  n1-standard-4  100           1.7.3
+vault-pool    n1-standard-2  100           1.7.3
 ```
 
 It can take several minutes before the `nomad` Kubernetes cluster is ready. Use the `gcloud` command to monitor progress:

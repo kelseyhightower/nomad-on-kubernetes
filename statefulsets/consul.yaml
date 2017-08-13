@@ -98,8 +98,8 @@ spec:
               protocol: "TCP"
           resources:
             requests:
-              cpu: 1
-              memory: "1024Mi"           
+              cpu: 500m
+              memory: "256Mi"           
       terminationGracePeriodSeconds: 10
       securityContext:
         fsGroup: 1000
