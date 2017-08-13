@@ -17,4 +17,4 @@ Forwarding from [::1]:8500 -> 8500
 
 At this point the Consul UI is available at http://127.0.0.1:8500/ui
 
-![Consul UI](images/consul-ui.png)
+![Consul UI](../images/consul-ui.png)
