@@ -2,6 +2,8 @@
 
 Nomad schedules applications and services in a similar fashion to Kubernetes but does not require container images. Running Nomad in addition to Kubernetes broadens the types of workloads you can run. In this tutorial Nomad will be used to schedule [Jobs](https://www.nomadproject.io/docs/job-specification/index.html) onto a dedicated set of machines, outside of the `nomad` Kubernetes cluster, running Nomad agents.
 
+> Kubernetes supports a wide range of workloads including batch and scheduled jobs, but workloads must be packaged and run as containers.
+
 ## Provision the Nomad Servers
 
 Nomad will be configured to store the Nomad cluster state on network attached volumes. The network attached volumes will be dynamically provisioned and managed by Kubernetes. Nomad will be configured to use Consul for service discovery and Vault for secrets management. The Nomad servers will also have access to Kubernetes secrets and services to help streamline bootstrapping and ongoing management of the Nomad servers.
