@@ -4,7 +4,7 @@ With the Nomad servers and agents fully bootstrapped you now have the ability to
 
 ## Configure the Nomad Client
 
-Before submitting Jobs the local Nomad client must be configure with the remote Nomad cluster details. This can be done by setting the following environment variables:
+Before submitting Jobs the local Nomad client must be configure with the Nomad cluster details. This can be done by setting the following environment variables:
 
 ```
 NOMAD_ADDR
