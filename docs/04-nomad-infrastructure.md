@@ -4,7 +4,7 @@ In this section the TLS certificates, encryption tokens, and networking stack wi
 
 ## Create the Kubernetes Services
 
-The Nomad control plane is composed of services that need to be exposed inside and outside the Kubernetes cluster:
+The Nomad control plane is composed of services that need to be exposed inside and outside the `nomad` Kubernetes cluster:
 
 * `consul` - A [headless service](https://kubernetes.io/docs/concepts/services-networking/service/#headless-services) that exposes Consul inside the Kubernetes cluster.
 * `consul-dns` - A [service](https://kubernetes.io/docs/concepts/services-networking/service/) that exposes the Consul DNS server inside the Kubernetes cluster.
