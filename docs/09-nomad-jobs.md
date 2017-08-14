@@ -142,7 +142,7 @@ nomad run jobs/token-printer.nomad
 Retrieve and view the logs for the `token-printer` Job:
 
 ```
-nomad logs -f -stderr -job token-printer
+nomad logs -stderr -job token-printer
 ```
 
 ```
