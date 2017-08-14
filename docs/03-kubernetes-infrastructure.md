@@ -113,7 +113,7 @@ Enable access to the Nomad cluster from anywhere:
 ```
 gcloud compute firewall-rules create default-allow-nomad \
   --allow tcp:4646-4647 \
-  --description "Allow consul from anywhere"
+  --description "Allow nomad from anywhere"
 ```
 
 Enable access to the Vault cluster from anywhere:
