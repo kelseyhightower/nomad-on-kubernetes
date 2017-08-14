@@ -159,3 +159,5 @@ Stop and purge the `token-printer` Job:
 ```
 nomad stop -purge token-printer
 ```
+
+Next: [The Consul UI](10-consul-ui.md)
