@@ -44,7 +44,7 @@ vault-0    2/2       Running   0          33s
 
 Before Vault can be used to manage secrets it must be [initialized](https://www.vaultproject.io/intro/getting-started/deploy.html#initializing-the-vault) and [unsealed](https://www.vaultproject.io/docs/concepts/seal.html).
 
-The Vault client can be used to initialize and unseal the remote Vault cluster, but it must be configured with the remote Vault cluster details. This can be done by setting the following environment variables:
+The Vault client can be used to initialize and unseal the Vault cluster, but it must be configured with the Vault cluster details. This can be done by setting the following environment variables:
 
 ```
 VAULT_ADDR
@@ -59,7 +59,7 @@ Source the `vault.env` shell script to populate the necessary environment variab
 source vault.env
 ```
 
-Check the current status of the remote Vault cluster:
+Check the current status of the Vault cluster:
 
 ```
 vault status
@@ -74,7 +74,7 @@ Code: 400. Errors:
 * server is not yet initialized
 ```
 
-The above error indicates the Vault cluster needs to be initialized. Initialize the remote Vault cluster:
+The above error indicates the Vault cluster needs to be initialized. Initialize the Vault cluster:
 
 ```
 vault init
@@ -99,9 +99,9 @@ your vault will remain permanently sealed.
 
 Save the five unseal keys and the initial root token.
 
-### Unseal the Remote Vault Instance
+### Unseal the Vault Instance
 
-Unseal the remote Vault instance using three of the unseal keys:
+Unseal the Vault instance using three of the unseal keys:
 
 ```
 vault unseal
@@ -130,7 +130,7 @@ Unseal Progress: 0
 Unseal Nonce:
 ```
 
-Review the status of the remote Vault cluster:
+Review the status of the Vault cluster:
 
 ```
 vault status
@@ -151,11 +151,11 @@ High-Availability Enabled: true
 	Leader Cluster Address: https://XX.X.X.X:8201
 ```
 
-At this point the remote Vault cluster has been initialized and is ready for use.
+At this point the Vault cluster has been initialized and is ready for use.
 
 ### Login to the Vault Cluster
 
-Login to the remote Vault cluster using the initial root token:
+Login to the Vault cluster using the initial root token:
 
 ```
 vault auth
@@ -234,6 +234,6 @@ vault-token:    36 bytes
 
 The Vault cluster is now ready for use by the Nomad control plane.
 
-> Note: If the Vault server is ever restarted it must be [unsealed](#unseal-the-remote-vault-instance).
+> Note: If the Vault server is ever restarted it must be [unsealed](#unseal-the-vault-instance).
 
 Next: [Provision The Nomad Servers](07-nomad.md)
