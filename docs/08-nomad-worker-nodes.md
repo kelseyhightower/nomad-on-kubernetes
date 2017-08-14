@@ -53,6 +53,8 @@ gcloud compute instance-groups managed create nomad \
   --template nomad-instance-template
 ```
 
+> A single Nomad worker is being provisioned to control cost. Increase the number given to the `--size` flag for more instances.
+
 It can take a few minutes to provision the Nomad worker instances. Use the `gcloud` command to monitor progress:
 
 ```
