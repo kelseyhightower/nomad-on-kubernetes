@@ -8,13 +8,13 @@ Kubernetes will be used to host the Nomad control plane including the following 
 
 ## Provision a Kubernetes Cluster
 
-A Kubernetes 1.7.x cluster is required to host the Nomad control plane components. Use the `gcloud` command to provision a five node Kubernetes cluster:
+A Kubernetes 1.7.x cluster is required to host the Nomad control plane components. Use the `gcloud` command to provision a three node Kubernetes cluster:
 
 ```
 gcloud container clusters create nomad \
   --cluster-version 1.7.3 \
-  --machine-type n1-standard-4 \
-  --num-nodes 5
+  --machine-type n1-standard-2 \
+  --num-nodes 3
 ```
 
 It can take several minutes to provision the Kubernetes cluster. Either wait for the above command to complete or use the `gcloud` command to monitor progress in a separate terminal:
@@ -24,7 +24,7 @@ gcloud container clusters list
 ```
 ```
 NAME   ZONE           MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
-nomad  us-central1-f  1.7.3           XX.XXX.XXX.XX  n1-standard-8  1.7.3         5          PROVISIONING
+nomad  us-central1-f  1.7.3           XX.XXX.XXX.XX  n1-standard-4  1.7.3         3          PROVISIONING
 ```
 
 > Estimated time to completion: 5 minutes.
@@ -34,7 +34,7 @@ gcloud container clusters list
 ```
 ```
 NAME   ZONE           MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
-nomad  us-central1-f  1.7.3           XX.XXX.XXX.XX  n1-standard-8  1.7.3         5          RUNNING
+nomad  us-central1-f  1.7.3           XX.XXX.XXX.XX  n1-standard-4  1.7.3         3          RUNNING
 ```
 
 ### Provision a Vault Node Pool
@@ -58,7 +58,7 @@ gcloud container node-pools list --cluster nomad
 ```
 ```
 NAME          MACHINE_TYPE   DISK_SIZE_GB  NODE_VERSION
-default-pool  n1-standard-4  100           1.7.3
+default-pool  n1-standard-2  100           1.7.3
 vault-pool    n1-standard-2  100           1.7.3
 ```
 
@@ -70,7 +70,7 @@ gcloud container clusters list
 
 ```
 NAME   ZONE           MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
-nomad  us-central1-f  1.7.3           XXX.XXX.XX.XX  n1-standard-8  1.7.3         7          RECONCILING
+nomad  us-central1-f  1.7.3           XXX.XXX.XX.XX  n1-standard-4  1.7.3         5          RECONCILING
 ```
 
 > Estimated time to completion: 3 minutes.
@@ -81,7 +81,7 @@ gcloud container clusters list
 
 ```
 NAME   ZONE           MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
-nomad  us-central1-f  1.7.3           XXX.XXX.XX.XX  n1-standard-8  1.7.3         7          RUNNING
+nomad  us-central1-f  1.7.3           XXX.XXX.XX.XX  n1-standard-4  1.7.3         5          RUNNING
 ```
 
 ### Taint the Vault Node Pool

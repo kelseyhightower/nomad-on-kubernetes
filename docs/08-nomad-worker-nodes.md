@@ -49,19 +49,17 @@ Create the `nomad` managed instance group:
 ```
 gcloud compute instance-groups managed create nomad \
   --base-instance-name nomad \
-  --size 3 \
+  --size 1 \
   --template nomad-instance-template
 ```
 
-It can take a few minutes to provision the three Nomad worker instances. Use the `gcloud` command to monitor progress:
+It can take a few minutes to provision the Nomad worker instances. Use the `gcloud` command to monitor progress:
 
 ```
 gcloud compute instance-groups list-instances nomad
 ```
 ```
 NAME        ZONE           STATUS
-nomad-XXXX  us-central1-f  RUNNING
-nomad-XXXX  us-central1-f  RUNNING
 nomad-XXXX  us-central1-f  RUNNING
 ```
 
@@ -94,8 +92,6 @@ nomad node-status
 
 ```
 ID        DC   Name        Class   Drain  Status
-XXXXXXXX  dc1  nomad-XXXX  <none>  false  ready
-XXXXXXXX  dc1  nomad-XXXX  <none>  false  ready
 XXXXXXXX  dc1  nomad-XXXX  <none>  false  ready
 ```
 

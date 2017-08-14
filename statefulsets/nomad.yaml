@@ -47,8 +47,8 @@ spec:
               protocol: "UDP"
           resources:
             requests:
-              cpu: 500m
-              memory: "512Mi"
+              cpu: "500m"
+              memory: "1Gi"
           volumeMounts:
             - name: nomad-config
               mountPath: /etc/nomad/nomad.d
@@ -84,7 +84,7 @@ spec:
           resources:
             requests:
               cpu: "250m"
-              memory: "128Mi"
+              memory: "1Gi"
           volumeMounts:
             - name: consul-config
               mountPath: /etc/consul/config
@@ -119,7 +119,7 @@ spec:
           - ReadWriteOnce
         resources:
           requests:
-            storage: 100Gi
+            storage: 10Gi
     - metadata:
         name: consul-data
       spec:
@@ -127,4 +127,4 @@ spec:
           - ReadWriteOnce
         resources:
           requests:
-            storage: 100Gi
+            storage: 10Gi

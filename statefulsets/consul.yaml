@@ -74,7 +74,7 @@ spec:
               protocol: "TCP"
             - name: dns-udp
               containerPort: 8600
-              protocol: "UDP" 
+              protocol: "UDP"
             - name: http
               containerPort: 8500
               protocol: "TCP"
@@ -98,8 +98,8 @@ spec:
               protocol: "TCP"
           resources:
             requests:
-              cpu: 500m
-              memory: "256Mi"           
+              cpu: "250m"
+              memory: "1Gi"
       terminationGracePeriodSeconds: 10
       securityContext:
         fsGroup: 1000
@@ -109,7 +109,7 @@ spec:
             name: consul
         - name: consul-tls
           secret:
-            secretName: consul  
+            secretName: consul
   volumeClaimTemplates:
     - metadata:
         name: consul-data
@@ -118,4 +118,4 @@ spec:
           - ReadWriteOnce
         resources:
           requests:
-            storage: 100Gi
+            storage: 10Gi
