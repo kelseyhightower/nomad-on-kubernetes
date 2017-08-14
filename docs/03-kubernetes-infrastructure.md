@@ -14,7 +14,8 @@ A Kubernetes 1.7.3+ cluster is required to host the Nomad control plane componen
 gcloud container clusters create nomad \
   --cluster-version 1.7.3 \
   --machine-type n1-standard-2 \
-  --num-nodes 3
+  --num-nodes 3 \
+  --zone us-east1-b
 ```
 
 It can take several minutes to provision the `nomad` Kubernetes cluster. Either wait for the above command to complete or use the `gcloud` command to monitor progress in a separate terminal:
