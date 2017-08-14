@@ -35,7 +35,7 @@ Using Kubernetes to deploy and manage Nomad presents an opportunity for learning
 
 ### Clean up
 
-Run the `clean-up` bash script to remove all compute resources created by this tutorial.
+Run the `clean-up` bash script to remove all compute resources created by this tutorial:
 
 ```
 bash clean-up
