@@ -8,7 +8,7 @@ Kubernetes will be used to host the Nomad control plane including the following 
 
 ## Provision a Kubernetes Cluster
 
-A Kubernetes 1.7.x cluster is required to host the Nomad control plane components. Use the `gcloud` command to provision a three node Kubernetes cluster:
+A Kubernetes 1.7.3+ cluster is required to host the Nomad control plane components. Use the `gcloud` command to provision a three node Kubernetes cluster:
 
 ```
 gcloud container clusters create nomad \
