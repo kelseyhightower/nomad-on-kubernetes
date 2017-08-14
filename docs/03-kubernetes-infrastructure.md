@@ -96,7 +96,7 @@ kubectl taint nodes \
 
 ### Configure Firewall Rules
 
-This tutorial permits remote access to the Nomad control plane from anywhere in favor of simplicity. In production environments steps should be taken to restrict remote access from a limited set of IP address ranges. Access to all components will be secured using TLS mutual authentication.  
+This tutorial permits remote access to the Nomad control plane from anywhere. In production environments steps should be taken to restrict remote access to a limited set of IP address ranges. Access to all components will be secured using TLS mutual authentication.  
 
 Enable access to the Consul cluster from anywhere:
 
