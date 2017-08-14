@@ -30,7 +30,7 @@ type vaultToken struct {
 func newVaultToken() (*vaultToken, error) {
 	vt := &vaultToken{
 		path: "secrets/vault_token",
-		mu: &sync.RWMutex{},
+		mu:   &sync.RWMutex{},
 	}
 	err := vt.updateTokenFromFile()
 	if err != nil {
@@ -94,7 +94,7 @@ func main() {
 	}()
 
 	for {
-		s := <- signalChan
+		s := <-signalChan
 		switch s {
 		case syscall.SIGHUP:
 			log.Println("reloading vault token...")
