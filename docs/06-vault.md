@@ -175,19 +175,19 @@ token_policies: [root]
 
 Nomad has native [Vault integration](https://www.nomadproject.io/docs/vault-integration/index.html) which requires a role based Vault token.
 
-### Create the Nomad Role Based Vault Token
+Create the `nomad-server` policy:
 
 ```
 vault policy-write nomad-server nomad-server-policy.hcl
 ```
 
+Create the `nomad-cluster` role:
+
 ```
 vault write /auth/token/roles/nomad-cluster @nomad-cluster-role.json
 ```
 
-### Update the Nomad Kubernetes Secret
-
-Generate a new role based Vault token:
+Generate a new role based Vault token based on the `nomad-server` policy:
 
 ```
 NOMAD_VAULT_TOKEN=$(vault token-create \
@@ -196,6 +196,8 @@ NOMAD_VAULT_TOKEN=$(vault token-create \
   -orphan \
   -format json | tee ~/.nomad-vault-token | jq -r '.auth.client_token')
 ```
+
+### Update the Nomad Kubernetes Secret
 
 Update the `nomad` Kubernetes secret and append the `vault-token` secret:
 
