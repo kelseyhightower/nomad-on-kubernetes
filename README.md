@@ -1,8 +1,14 @@
 # Nomad on Kubernetes
 
-The Nomad on Kubernetes tutorial documents how to deploy [Nomad](https://www.nomadproject.io/) on [Kubernetes](https://kubernetes.io/) with a configuration suitable for production usage.
+The Nomad on Kubernetes tutorial documents how to deploy [Nomad](https://www.nomadproject.io/) on [Kubernetes](https://kubernetes.io/). The following diagram provides a high level overview of the Nomad on Kubernetes architecture.
 
 ![Nomad on Kubernetes](images/nomad-on-kubernetes.png)
+
+The following components will be deployed to a Kubernetes cluster with minimal CPU and memory allocations to control cost:
+
+* [Consul](https://www.consul.io/) 0.9.2
+* [Vault](https://www.vaultproject.io/) 0.8.0
+* [Nomad](https://www.nomadproject.io/) 0.6.0
 
 ## Rational
 
