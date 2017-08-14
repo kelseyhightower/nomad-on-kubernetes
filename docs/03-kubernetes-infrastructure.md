@@ -106,7 +106,9 @@ gcloud compute firewall-rules create default-allow-consul \
   --description "Allow consul from anywhere"
 ```
 
-Enable access to the Nomad server from anywhere:
+> Consul will only be exposed inside the VPC network where Kubernetes and Nomad workers are deployed.
+
+Enable access to the Nomad cluster from anywhere:
 
 ```
 gcloud compute firewall-rules create default-allow-nomad \
@@ -114,7 +116,7 @@ gcloud compute firewall-rules create default-allow-nomad \
   --description "Allow consul from anywhere"
 ```
 
-Enable access to the Vault server from anywhere:
+Enable access to the Vault cluster from anywhere:
 
 ```
 gcloud compute firewall-rules create default-allow-vault \
