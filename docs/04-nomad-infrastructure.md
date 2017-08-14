@@ -191,7 +191,7 @@ kubectl create secret generic nomad \
   --from-file=nomad-key.pem
 ```
 
-Use the `kubectl` to verify the secrets have been created:
+Use the `kubectl` command to verify the secrets have been created:
 
 ```
 kubectl get secrets
