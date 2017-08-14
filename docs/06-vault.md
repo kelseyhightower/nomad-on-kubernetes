@@ -153,7 +153,9 @@ High-Availability Enabled: true
 
 At this point the remote Vault cluster has been initialized and is ready for use.
 
-Login the remote Vault cluster using the initial root token:
+### Login to the Vault Cluster
+
+Login to the remote Vault cluster using the initial root token:
 
 ```
 vault auth
