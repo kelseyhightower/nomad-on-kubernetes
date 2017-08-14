@@ -45,6 +45,8 @@ consul-2   1/1       Running   0          39s
 
 The internal Kubernetes DNS service can be configured to delegate specific domains to another DNS server such as Consul. This enables Consul to handle all DNS queries to the `consul.` domain, while Kubernetes handles everything else.
 
+Update the `kube-dns` ConfigMap to delegate the `consul.` domain to the Consul cluster: 
+
 ```
 cat <<EOF | kubectl apply -f -
 apiVersion: v1
