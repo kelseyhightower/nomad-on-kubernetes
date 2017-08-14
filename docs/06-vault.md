@@ -40,7 +40,7 @@ NAME       READY     STATUS    RESTARTS   AGE
 vault-0    2/2       Running   0          33s
 ```
 
-## Initialize Vault
+## Initialize the Vault Cluster
 
 Before Vault can be used to manage secrets it must be [initialized](https://www.vaultproject.io/intro/getting-started/deploy.html#initializing-the-vault) and [unsealed](https://www.vaultproject.io/docs/concepts/seal.html).
 
