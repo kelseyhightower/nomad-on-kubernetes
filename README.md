@@ -14,7 +14,7 @@ The following components will be deployed to a Kubernetes cluster with minimal C
 
 Nomad and Kubernetes [have many differences](https://www.nomadproject.io/intro/vs/kubernetes.html) in terms of managing applications but have also been found to [complement each other](https://stackshare.io/circleci/how-circleci-processes-4-5-million-builds-per-month). Nomad is [workload agnostic](https://www.nomadproject.io/docs/drivers/index.html) and supports running non-containerized applications -- broadening the type of workloads you can run across your infrastructure. Other components of the Nomad stack such as Consul and Vault can be leveraged directly within Kubernetes. Consul can provide federated service discovery across multiple Kubernetes clusters and existing platforms such as virtual machines. Vault can provide [robust secrets](https://www.vaultproject.io/intro/use-cases.html) management to Kubernetes workloads including dynamic secret generation.
 
-Kubernetes can ease the deployment and management of Nomad and related components by leveraging some of Kubernetes more advanced features including:
+Kubernetes can ease the deployment and management of Nomad and related components by leveraging some of Kubernetes advanced features including:
 
 * [Advanced Scheduling: Affinity and Anti-affinity](https://kubernetes.io/docs/concepts/configuration/assign-pod-node/)
 * [Dynamic Storage Provisioning](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#dynamic)
