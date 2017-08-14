@@ -191,4 +191,17 @@ kubectl create secret generic nomad \
   --from-file=nomad-key.pem
 ```
 
+Use the `kubectl` to verify the secrets have been created:
+
+```
+kubectl get secrets
+```
+```
+NAME                  TYPE                                  DATA      AGE
+consul                Opaque                                4         23s
+default-token-XXXXX   kubernetes.io/service-account-token   3         32m
+nomad                 Opaque                                3         13s
+vault                 Opaque                                3         18s
+```
+
 Next: [Provision The Consul Cluster](05-consul.md)
