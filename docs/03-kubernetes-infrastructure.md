@@ -24,7 +24,7 @@ gcloud container clusters list
 ```
 ```
 NAME   ZONE           MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
-nomad  us-central1-f  1.7.3           XX.XXX.XXX.XX  n1-standard-4  1.7.3         3          PROVISIONING
+nomad  us-central1-f  1.7.3           XX.XXX.XXX.XX  n1-standard-2  1.7.3         3          PROVISIONING
 ```
 
 > Estimated time to completion: 5 minutes.
@@ -34,7 +34,7 @@ gcloud container clusters list
 ```
 ```
 NAME   ZONE           MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
-nomad  us-central1-f  1.7.3           XX.XXX.XXX.XX  n1-standard-4  1.7.3         3          RUNNING
+nomad  us-central1-f  1.7.3           XX.XXX.XXX.XX  n1-standard-2  1.7.3         3          RUNNING
 ```
 
 ### Provision a Vault Node Pool
@@ -70,7 +70,7 @@ gcloud container clusters list
 
 ```
 NAME   ZONE           MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
-nomad  us-central1-f  1.7.3           XXX.XXX.XX.XX  n1-standard-4  1.7.3         5          RECONCILING
+nomad  us-central1-f  1.7.3           XXX.XXX.XX.XX  n1-standard-2  1.7.3         5          RECONCILING
 ```
 
 > Estimated time to completion: 3 minutes.
@@ -81,7 +81,7 @@ gcloud container clusters list
 
 ```
 NAME   ZONE           MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
-nomad  us-central1-f  1.7.3           XXX.XXX.XX.XX  n1-standard-4  1.7.3         5          RUNNING
+nomad  us-central1-f  1.7.3           XXX.XXX.XX.XX  n1-standard-2  1.7.3         5          RUNNING
 ```
 
 ### Taint the Vault Node Pool
