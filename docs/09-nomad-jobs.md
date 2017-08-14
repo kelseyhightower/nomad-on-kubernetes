@@ -108,6 +108,8 @@ PING google.com (XX.XXX.XX.XXX) 56(84) bytes of data.
 64 bytes from XX-XX-XXXX.XXXXX.net (XX.XXX.XX.XXX): icmp_seq=3 ttl=53 time=0.621 ms
 ```
 
+> The nomad logs command requires remote access to the Nomad worker node running the Job. This works because of the firewall rule created earlier that enabled remote access to Nomad port 4646 from anywhere.
+
 The `ping` Job is set to run continuously. After every successful run Nomad will automatically restart the Job.
 
 Stop and purge the `ping` Job:
