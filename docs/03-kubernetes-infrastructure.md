@@ -47,7 +47,8 @@ gcloud container node-pools create vault-pool \
   --cluster nomad \
   --machine-type n1-standard-2 \
   --num-nodes 2 \
-  --node-labels dedicated=vault
+  --node-labels dedicated=vault \
+  --zone us-east1-b
 ```
 
 > Estimated time to completion: 2 minutes.
