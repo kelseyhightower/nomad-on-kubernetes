@@ -10,7 +10,7 @@ This tutorial leverages the [Google Cloud Platform](https://cloud.google.com/) t
 
 ## Source
 
-This tutorial requires access to its source code on the same machine where commands will be executed. Clone this repository:
+This tutorial requires access to its source tree on the same machine where commands will be executed. Clone this repository:
 
 ```
 git clone https://github.com/kelseyhightower/nomad-on-kubernetes.git
