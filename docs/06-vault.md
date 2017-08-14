@@ -171,7 +171,7 @@ token_policies: [root]
 
 > Enter the initial root token at the prompt.
 
-## Create Nomad Root Token
+## Create a Nomad Role Based Token
 
 Nomad has native [Vault integration](https://www.nomadproject.io/docs/vault-integration/index.html) which requires a role based Vault token.
 
