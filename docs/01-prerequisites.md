@@ -2,7 +2,7 @@
 
 ## Google Cloud Platform
 
-This tutorial leverages the [Google Cloud Platform](https://cloud.google.com/) to streamline the provisioning of a Kubernetes cluster and the necessary compute infrastructure required to run a Nomad cluster. [Sing up](https://cloud.google.com/free/) for $300 in free credits.
+This tutorial leverages the [Google Cloud Platform](https://cloud.google.com/) to streamline the provisioning of a Kubernetes cluster and the necessary compute infrastructure required to run a Nomad cluster. [Sign up](https://cloud.google.com/free/) for $300 in free credits.
 
 [Estimated cost](https://cloud.google.com/products/calculator/#id=1dc8801f-7903-432c-8eb3-f3b73b10be4d) to run this tutorial: $0.43 per hour ($10.31 per day).
 
