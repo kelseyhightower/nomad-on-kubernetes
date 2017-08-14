@@ -8,7 +8,7 @@ An [instance group](https://cloud.google.com/compute/docs/instance-groups/) will
 
 ### Create the Nomad Instance Template
 
-The Consul internal IP address and gossip encryption key are required to configure the Consul agent running on each Nomad worker instance. Consul provides service discovery for Nomad Jobs.
+The Consul internal IP address and gossip encryption key are required to configure the Consul agent running on each Nomad worker instance. Consul provides service discovery for Nomad agents and Jobs.
 
 Retrieve the Consul gossip encryption key:
 
