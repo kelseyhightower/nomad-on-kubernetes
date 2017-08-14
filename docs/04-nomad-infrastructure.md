@@ -1,6 +1,6 @@
 # Provision The Nomad Infrastructure
 
-In this section the TLS certificates, encryption tokens, and networking stack will be setup and configured for the Nomad control plane.
+The Nomad control plane will be configured for remote access through a set of internal and external load balancers. Each component will be secured with TLS certificates and/or encryption tokens. In this section the necessary infrastructure to generate TLS certificates and encryption tokens will be setup. The resulting TLS certificates and encryption tokens will be stored in the `nomad` Kubernetes cluster as [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/), and made available to Nomad control plane components during deployment.
 
 ## Create the Kubernetes Services
 
