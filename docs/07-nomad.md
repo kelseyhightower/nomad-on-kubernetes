@@ -1,6 +1,6 @@
 # Nomad
 
-Nomad schedules applications and services in a similar fashion to Kubernetes but does not require container images. In our setup Nomad will be used to schedule [Jobs](https://www.nomadproject.io/docs/job-specification/index.html) onto a dedicated set of machines, outside of the Kubernetes cluster, running Nomad agents.
+Nomad schedules applications and services in a similar fashion to Kubernetes but does not require container images. Running Nomad in addition to Kubernetes broadens the types of workloads you can run. In this tutorial Nomad will be used to schedule [Jobs](https://www.nomadproject.io/docs/job-specification/index.html) onto a dedicated set of machines, outside of the `nomad` Kubernetes cluster, running Nomad agents.
 
 ## Provision the Nomad Servers
 
