@@ -90,7 +90,7 @@ Ensure nodes in the `vault-pool` node pool only accept Vault workloads by [taint
 
 ```
 kubectl taint nodes \
-  $(kubectl get nodes -l dedicated=vault -o jsonpath={.items[*].metadata.name}) \
+  $(kubectl get nodes -l dedicated=vault -o jsonpath='{.items[*].metadata.name}') \
   dedicated=vault:NoSchedule
 ```
 
