@@ -8,7 +8,7 @@ Kubernetes will be used to host the Nomad control plane including the following 
 
 ## Provision a Kubernetes Cluster
 
-A Kubernetes 1.7.3+ cluster is required to host the Nomad control plane components. Use the `gcloud` command to provision a three node Kubernetes cluster:
+A Kubernetes 1.7.3+ cluster is required to host the Nomad control plane components. Use the `gcloud` command to provision a four node Kubernetes cluster:
 
 ```
 gcloud container clusters create nomad \
@@ -24,7 +24,7 @@ gcloud container clusters list
 ```
 ```
 NAME   ZONE           MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
-nomad  us-central1-f  1.7.3           XX.XXX.XXX.XX  n1-standard-2  1.7.3         3          PROVISIONING
+nomad  us-central1-f  1.7.3           XX.XXX.XXX.XX  n1-standard-2  1.7.3         4          PROVISIONING
 ```
 
 > Estimated time to completion: 5 minutes.
@@ -34,7 +34,7 @@ gcloud container clusters list
 ```
 ```
 NAME   ZONE           MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
-nomad  us-central1-f  1.7.3           XX.XXX.XXX.XX  n1-standard-2  1.7.3         3          RUNNING
+nomad  us-central1-f  1.7.3           XX.XXX.XXX.XX  n1-standard-2  1.7.3         4          RUNNING
 ```
 
 ### Provision a Vault Node Pool
@@ -70,7 +70,7 @@ gcloud container clusters list
 
 ```
 NAME   ZONE           MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
-nomad  us-central1-f  1.7.3           XXX.XXX.XX.XX  n1-standard-2  1.7.3         5          RECONCILING
+nomad  us-central1-f  1.7.3           XXX.XXX.XX.XX  n1-standard-2  1.7.3         6          RECONCILING
 ```
 
 > Estimated time to completion: 3 minutes.
@@ -81,7 +81,7 @@ gcloud container clusters list
 
 ```
 NAME   ZONE           MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
-nomad  us-central1-f  1.7.3           XXX.XXX.XX.XX  n1-standard-2  1.7.3         5          RUNNING
+nomad  us-central1-f  1.7.3           XXX.XXX.XX.XX  n1-standard-2  1.7.3         6          RUNNING
 ```
 
 ### Taint the Vault Node Pool
