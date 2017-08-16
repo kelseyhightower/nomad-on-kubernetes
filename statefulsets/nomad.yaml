@@ -47,8 +47,8 @@ spec:
               protocol: "UDP"
           resources:
             requests:
-              cpu: "500m"
-              memory: "1Gi"
+              cpu: "250m"
+              memory: "512Mi"
           volumeMounts:
             - name: nomad-config
               mountPath: /etc/nomad/nomad.d
@@ -83,8 +83,8 @@ spec:
             - "-retry-join=consul-2.consul.$(NAMESPACE).svc.cluster.local"
           resources:
             requests:
-              cpu: "250m"
-              memory: "1Gi"
+              cpu: "125m"
+              memory: "512Mi"
           volumeMounts:
             - name: consul-config
               mountPath: /etc/consul/config
