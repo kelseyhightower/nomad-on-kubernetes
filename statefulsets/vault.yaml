@@ -79,7 +79,7 @@ spec:
           resources:
             requests:
               cpu: "125m"
-              memory: "512i"
+              memory: "512Mi"
           volumeMounts:
             - name: consul-config
               mountPath: /etc/consul/config
