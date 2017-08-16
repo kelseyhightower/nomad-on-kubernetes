@@ -31,7 +31,7 @@ gcloud compute instance-templates create nomad-instance-template \
   --can-ip-forward \
   --image-family ubuntu-1604-lts \
   --image-project ubuntu-os-cloud \
-  --machine-type n1-standard-2 \
+  --machine-type n1-standard-1 \
   --metadata "gossip-encryption-key=${GOSSIP_ENCRYPTION_KEY},consul-internal-ip=${CONSUL_INTERNAL_IP}" \
   --metadata-from-file "startup-script=nomad.sh,ca-cert=ca.pem,consul-cert=consul.pem,consul-key=consul-key.pem,nomad-cert=nomad.pem,nomad-key=nomad-key.pem" \
   --scopes default,compute-ro \
