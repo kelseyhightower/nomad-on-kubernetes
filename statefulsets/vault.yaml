@@ -29,7 +29,7 @@ spec:
           effect: "NoSchedule"
       containers:
         - name: vault
-          image: "vault:0.8.0"
+          image: "vault:0.8.2"
           args:
             - "server"
             - "-config=/etc/vault/config/vault.hcl"
@@ -54,7 +54,7 @@ spec:
             - name: vault-tls
               mountPath: /etc/vault/tls
         - name: consul
-          image: "consul:0.9.1"
+          image: "consul:0.9.3"
           env:
             - name: GOSSIP_ENCRYPTION_KEY
               valueFrom:

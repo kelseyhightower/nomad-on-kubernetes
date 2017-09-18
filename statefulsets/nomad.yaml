@@ -22,7 +22,7 @@ spec:
               topologyKey: kubernetes.io/hostname
       containers:
         - name: nomad
-          image: "gcr.io/hightowerlabs/nomad:0.6.0"
+          image: "gcr.io/hightowerlabs/nomad:0.6.3"
           env:
             - name: VAULT_TOKEN
               valueFrom:
@@ -59,7 +59,7 @@ spec:
             - name: vault-tls
               mountPath: /etc/vault/tls
         - name: consul
-          image: "consul:0.9.1"
+          image: "consul:0.9.3"
           env:
             - name: GOSSIP_ENCRYPTION_KEY
               valueFrom:

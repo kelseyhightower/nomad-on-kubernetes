@@ -6,9 +6,9 @@ The Nomad on Kubernetes tutorial documents how to deploy [Nomad](https://www.nom
 
 The following components will be deployed to a Kubernetes cluster with minimal CPU and memory allocations to control cost:
 
-* [Consul](https://www.consul.io/) 0.9.2
-* [Vault](https://www.vaultproject.io/) 0.8.0
-* [Nomad](https://www.nomadproject.io/) 0.6.0
+* [Consul](https://www.consul.io/) 0.9.3
+* [Vault](https://www.vaultproject.io/) 0.8.2
+* [Nomad](https://www.nomadproject.io/) 0.6.3
 
 ## Rational
 

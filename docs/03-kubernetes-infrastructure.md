@@ -2,17 +2,17 @@
 
 Kubernetes will be used to host the Nomad control plane including the following components:
 
-* [Consul](https://www.consul.io/) 0.9.2
-* [Vault](https://www.vaultproject.io/) 0.8.0
-* [Nomad](https://www.nomadproject.io/) 0.6.0
+* [Consul](https://www.consul.io/) 0.9.3
+* [Vault](https://www.vaultproject.io/) 0.8.2
+* [Nomad](https://www.nomadproject.io/) 0.6.3
 
 ## Provision a Kubernetes Cluster
 
-A Kubernetes 1.7.3+ cluster is required to host the Nomad control plane components. Use the `gcloud` command to provision a three node Kubernetes cluster:
+A Kubernetes 1.7.5+ cluster is required to host the Nomad control plane components. Use the `gcloud` command to provision a three node Kubernetes cluster:
 
 ```
 gcloud container clusters create nomad \
-  --cluster-version 1.7.3 \
+  --cluster-version 1.7.5 \
   --machine-type n1-standard-2 \
   --num-nodes 3
 ```
@@ -23,8 +23,8 @@ It can take several minutes to provision the `nomad` Kubernetes cluster. Either 
 gcloud container clusters list
 ```
 ```
-NAME   ZONE           MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
-nomad  us-central1-f  1.7.3           XX.XXX.XXX.XX  n1-standard-2  1.7.3         3          PROVISIONING
+NAME   ZONE        MASTER_VERSION  MASTER_IP  MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
+nomad  us-west1-c  1.7.5                      n1-standard-2  1.7.5         3          PROVISIONING
 ```
 
 > Estimated time to completion: 5 minutes.
@@ -33,8 +33,8 @@ nomad  us-central1-f  1.7.3           XX.XXX.XXX.XX  n1-standard-2  1.7.3       
 gcloud container clusters list
 ```
 ```
-NAME   ZONE           MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
-nomad  us-central1-f  1.7.3           XX.XXX.XXX.XX  n1-standard-2  1.7.3         3          RUNNING
+NAME   ZONE        MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
+nomad  us-west1-c  1.7.5           XX.XXX.XX.XXX  n1-standard-2  1.7.5         3          RUNNING
 ```
 
 ### Provision a Vault Node Pool
@@ -58,8 +58,8 @@ gcloud container node-pools list --cluster nomad
 ```
 ```
 NAME          MACHINE_TYPE   DISK_SIZE_GB  NODE_VERSION
-default-pool  n1-standard-2  100           1.7.3
-vault-pool    n1-standard-2  100           1.7.3
+default-pool  n1-standard-2  100           1.7.5
+vault-pool    n1-standard-2  100           1.7.5
 ```
 
 It can take several minutes before the `nomad` Kubernetes cluster is ready. Use the `gcloud` command to monitor progress:
@@ -69,8 +69,8 @@ gcloud container clusters list
 ```
 
 ```
-NAME   ZONE           MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
-nomad  us-central1-f  1.7.3           XXX.XXX.XX.XX  n1-standard-2  1.7.3         5          RECONCILING
+NAME   ZONE        MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
+nomad  us-west1-c  1.7.5           XX.XXX.XX.XXX  n1-standard-2  1.7.5         5          RECONCILING
 ```
 
 > Estimated time to completion: 3 minutes.
@@ -80,8 +80,8 @@ gcloud container clusters list
 ```
 
 ```
-NAME   ZONE           MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
-nomad  us-central1-f  1.7.3           XXX.XXX.XX.XX  n1-standard-2  1.7.3         5          RUNNING
+NAME   ZONE        MASTER_VERSION  MASTER_IP      MACHINE_TYPE   NODE_VERSION  NUM_NODES  STATUS
+nomad  us-west1-c  1.7.5           XX.XXX.XX.XXX  n1-standard-2  1.7.5         5          RUNNING
 ```
 
 ### Taint the Vault Node Pool
