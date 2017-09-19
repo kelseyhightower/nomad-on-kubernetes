@@ -15,4 +15,11 @@ Install the following client tools and ensure they are in your path:
 
 > Install kubectl using gcloud: gcloud components install kubectl
 
+Configure default zone and project in in gcloud:
+
+`gcloud config set compute/zone <zone>` ([Google Cloud Regions and Zones](https://cloud.google.com/compute/docs/regions-zones/regions-zones))
+
+`gcloud projects create k8snomad --name Nomad`
+`gcloud config set project k8snomad`
+
 Next: [Provision The Kubernetes Infrastructure](03-kubernetes-infrastructure.md)
