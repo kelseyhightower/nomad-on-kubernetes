@@ -21,21 +21,21 @@ apt-get update
 apt-get install -y wget unzip dnsmasq
 
 ## Download Consul
-wget -O consul_0.9.3_linux_amd64.zip \
-  https://releases.hashicorp.com/consul/0.9.3/consul_0.9.3_linux_amd64.zip?_ga=2.42765413.1704913238.1505691878-1833551740.1502228991
+wget -O consul_1.2.0_linux_amd64.zip \
+  https://releases.hashicorp.com/consul/1.2.0/consul_1.2.0_linux_amd64.zip
 
 ## Download Nomad
-wget -O nomad_0.6.3_linux_amd64.zip \
-  https://releases.hashicorp.com/nomad/0.6.3/nomad_0.6.3_linux_amd64.zip?_ga=2.242342786.1815219695.1505691898-586844811.1502289673
+wget -O nomad_0.8.4_linux_amd64.zip \
+  https://releases.hashicorp.com/nomad/0.8.4/nomad_0.8.4_linux_amd64.zip
 
 ## Install Consul and Nomad
-unzip consul_0.9.3_linux_amd64.zip
-unzip nomad_0.6.3_linux_amd64.zip
+unzip consul_1.2.0_linux_amd64.zip
+unzip nomad_0.8.4_linux_amd64.zip
 
 chmod +x consul nomad
 mv consul nomad /usr/local/bin
 
-rm consul_0.9.3_linux_amd64.zip nomad_0.6.3_linux_amd64.zip
+rm consul_1.2.0_linux_amd64.zip nomad_0.8.4_linux_amd64.zip
 
 
 ## Configure and Start Consul
